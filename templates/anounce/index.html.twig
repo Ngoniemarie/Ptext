@@ -26,23 +26,23 @@
 			{% for announce in announces %}
 				<div class="col-md-4">
 					<div class="card mb-3">
-						<p class="card-header text-center">{{ announce.rooms }}
+						<p class="card-header text-center">{{announces.rooms }}
 							Chambres à
-							{{ announce.price }}
+							{{ announces.price }}
 							/ mois
 							<br>
-							{{ announce.comments | length }} commentaires</p>
-						<img src="{{ announce.coverImage }}" style="height:150px; width:100%;" alt="img">
+							{{ announces.comments | length }} commentaires</p>
+						<img src="{{ announces.coverImage }}" style="height:150px; width:100%;" alt="img">
 						<div class="card-body">
-							<p class="card-text">{{ announce.introduction }}</p>
+							<p class="card-text">{{ announces.introduction }}</p>
 						</div>
 						<div class="card-body">
-							<a href="{{path('app_announce_show', {id: announce.id})}}" class="card-link btn btn-primary">Détails...</a>
+							<a href="{{path('app_announce_show', {id:announces.id})}}" class="card-link btn btn-primary">Détails...</a>
 						</div>
 						<div class="card-footer text-muted text-center">
 							<i class="fas fa-map-marker-alt"></i>
-							<small>{{ announce.address }}</small> <br>
-							<small>{{ announce.createdAt | date("d-m-y") }}</small>
+							<small>{{ announces.address }}</small> <br>
+							<small>{{ announces.createdAt | date("d-m-y") }}</small>
 						</div>
 					</div>
 				</div>

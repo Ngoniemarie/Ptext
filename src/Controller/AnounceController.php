@@ -10,19 +10,19 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AnounceController extends AbstractController
 {
-   // /**
-   //  * @Route("/announce", name="app_annouce")
-  //   */
- //   public function index(AnnounceRepository $repo): Response
- //   {
+   /**
+    * @Route("/announce", name="app_annouce")
+    */
+    public function index(AnnounceRepository $repo): Response
+      {
 
-   //     $announces = $repo->findAll();
+    $announces = $repo->findAll();
 
-      //  return $this->render('annouce/index.html.twig', [
+       return $this->render('annouce/index.html.twig', [
 
-         //   'announces' => $announces
+          'announces' => $announces
            
-       // ]);
-  //  }
+        ]);
+   }
 
 }

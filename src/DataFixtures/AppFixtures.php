@@ -28,7 +28,7 @@ class AppFixtures extends Fixture
          $announce = new Announce();
          $announce->setTitle($faker->sentence(3, false));
          $announce->setSlug($slugger->slugify($announce->getTitle()));
-         $announce->setIntroduction($faker->text(200));
+         $announce->setIntroduction($faker->text(400));
          $announce->setDescription($faker->text(800));
          $announce->setPrice(mt_rand(30000,60000));
          $announce->setAddress($faker->address(3));

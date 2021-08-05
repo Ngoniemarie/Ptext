@@ -42,6 +42,19 @@ class HomeController extends AbstractController
             'announce' => $announce
         ]);
     }
+
+   
+
+    public function form(AnnounceRepository $repo, int $id): Response
+    {
+        $announce = $repo->find($id);
+        
+        return $this->render('anounce/show.html.twig',[
+            
+            'announce' => $announce
+        ]);
+    }
+
    
 }
 
